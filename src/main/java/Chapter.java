@@ -2,17 +2,17 @@ import java.util.List;
 
 public class Chapter {
     private String name;
-    private List<String> subChapterList;
+    private List<SubChapter> subChapterList;
 
     public Chapter(String name) {
         this.name = name;
     }
 
-    public int createSubChapter(String subchapter){
+    public int createSubChapter(String subchp) {
+        SubChapter subchapter = new SubChapter(subchp);
         subChapterList.add(subchapter);
-        SubChapter subchp = new SubChapter(subchapter);
 
-        return subChapterList.indexOf(subchp);
+        return subChapterList.indexOf(subchapter);
     }
 
     public SubChapter getSubChapter(int subchapter) {
