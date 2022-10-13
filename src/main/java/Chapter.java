@@ -10,11 +10,13 @@ public class Chapter {
 
     public int createSubChapter(String subchapter){
         subChapterList.add(subchapter);
-        return subChapterList.indexOf(subchapter);
+        SubChapter subchp = new SubChapter(subchapter);
+
+        return subChapterList.indexOf(subchp);
     }
 
     public SubChapter getSubChapter(int subchapter) {
-        return new SubChapter(subChapterList.get(subchapter));
+        return new SubChapter("Subcapitolul" + name +"." + subchapter);
     }
 
     public void print() {

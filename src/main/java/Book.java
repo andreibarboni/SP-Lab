@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Book {
     private String title;
-    private List<Author> authorList;
+    private Author author;
     private List<Chapter> chapterList;
 
 
@@ -11,12 +11,14 @@ public class Book {
     }
 
     public void addAuthor(Author author){
-        authorList.add(author);
+        this.author = author;
     }
 
-    public int createChapter(Chapter chapter){
-        chapterList.add(chapter);
-        return chapterList.indexOf(chapter);
+    public int createChapter(String chapter) {
+        Chapter chp = new Chapter(chapter);
+        chapterList.add(chp);
+
+        return chapterList.indexOf(chp);
     }
 
     public Chapter getChapter(int chapter) {

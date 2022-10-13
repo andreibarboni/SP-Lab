@@ -10,15 +10,18 @@ public class SubChapter {
         this.name = name;
     }
 
-    public void createNewImage(Image image) {
+    public void createNewImage(String img) {
+        Image image = new Image(img);
         imageList.add(image);
     }
 
-    public void createNewParagraph(Paragraph paragraph) {
+    public void createNewParagraph(String prg) {
+        Paragraph paragraph = new Paragraph(prg);
         paragraphList.add(paragraph);
     }
 
-    public void createNewTable(Table table) {
+    public void createNewTable(String tbl) {
+        Table table = new Table(tbl);
         tableList.add(table);
     }
 
