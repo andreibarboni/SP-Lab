@@ -1,12 +1,20 @@
-import java.util.ArrayList;
-import java.util.List;
+import javax.lang.model.util.Elements;
+import java.util.*;
 
 public class Section implements Element {
-    private final String title;
-    private final List<Element> elementList = new ArrayList<Element>();
+    protected String title;
+    private List<Element> elementList = new ArrayList<Element>();
 
     public Section(String title) {
         this.title = title;
+    }
+
+    @Override
+    public void print() {
+        System.out.println(title);
+        for (Element element:elementList) {
+            System.out.println(element);
+        }
     }
 
     @Override
@@ -21,8 +29,6 @@ public class Section implements Element {
 
     @Override
     public Element get(int el) {
-        return null;
-    }
-    public void print(){
+        return elementList.get(el);
     }
 }

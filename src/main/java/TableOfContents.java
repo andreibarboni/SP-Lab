@@ -1,2 +1,2 @@
-public class TableOfContents {
+public class TableOfContents{
 }
