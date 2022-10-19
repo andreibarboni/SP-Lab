@@ -2,8 +2,8 @@ import java.util.*;
 
 public class Book {
     private String title;
-    private Author author;
-    private List<Chapter> chapterList;
+    private List<Author> authorList =  new ArrayList<Author>();
+    public List<Chapter> chapterList = new ArrayList<Chapter>();
 
 
     public Book(String title) {
@@ -11,7 +11,7 @@ public class Book {
     }
 
     public void addAuthor(Author author){
-        this.author = author;
+        authorList.add(author);
     }
 
     public int createChapter(String chapter) {
