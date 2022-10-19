@@ -1,9 +1,9 @@
 import java.util.*;
 
 public class Book {
-    private String title;
-    private List<Author> authorList =  new ArrayList<Author>();
-    public List<Chapter> chapterList = new ArrayList<Chapter>();
+    private final String title;
+    private final List<Author> authorList =  new ArrayList<Author>();
+    public final List<Chapter> chapterList = new ArrayList<Chapter>();
 
 
     public Book(String title) {
@@ -26,6 +26,5 @@ public class Book {
     }
 
     public void print() {
-        System.out.println("Titlul cartii este " + title);
     }
 }

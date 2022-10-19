@@ -1,5 +1,5 @@
 public class Paragraph implements Element{
-    private String text;
+    private final String text;
 
     public Paragraph(String text) {
         this.text = text;

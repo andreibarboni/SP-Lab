@@ -1,5 +1,5 @@
 public class Image implements Element {
-    private String imageName;
+    private final String imageName;
 
     public Image(String imageName) {
         this.imageName = imageName;

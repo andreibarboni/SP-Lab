@@ -2,15 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Chapter {
-    private String name;
-    private List<SubChapter> subChapterList = new ArrayList<SubChapter>();
+    private final String name;
+
+    private int chp = 0;
+
+    private final List<SubChapter> subChapterList = new ArrayList<SubChapter>();
 
     public Chapter(String name) {
         this.name = name;
+        this.chp = chp + 1;
     }
 
-    public String getName() {
-        return name;
+
+    public int getChp() {
+        return chp;
     }
 
     public int createSubChapter(String subchp) {
@@ -21,10 +26,9 @@ public class Chapter {
     }
 
     public SubChapter getSubChapter(int subchapter) {
-        return new SubChapter("Subcapitolul " + subchapter);
+        return new SubChapter("Subcapitolul: " + getChp() + "." + subchapter);
     }
 
     public void print() {
-        System.out.println(name);
     }
 }
