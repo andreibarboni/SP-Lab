@@ -15,9 +15,13 @@ public class Book extends Section {
     @Override
     public void print() {
         System.out.println("Book: " + title);
-        System.out.println("Authors: \n");
+        System.out.println("Authors:");
         for (Author author:authorList) {
-            System.out.println(author);
+            author.print();
+        }
+
+        for (Element element:elementList) {
+            element.print();
         }
     }
 

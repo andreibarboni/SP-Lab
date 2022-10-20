@@ -13,7 +13,7 @@ public class Section implements Element {
     public void print() {
         System.out.println(title);
         for (Element element:elementList) {
-            System.out.println(element);
+            element.print();
         }
     }
 
