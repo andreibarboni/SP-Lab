@@ -14,11 +14,12 @@ public class Book extends Section {
 
     @Override
     public void print() {
-        System.out.println("Book: " + title);
+        System.out.println("Book: " + title + "\n");
         System.out.println("Authors:");
         for (Author author:authorList) {
             author.print();
         }
+        System.out.println("\n");
 
         for (Element element:elementList) {
             element.print();

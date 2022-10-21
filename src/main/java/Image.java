@@ -22,6 +22,6 @@ public class Image implements Element {
 
     @Override
     public void print() {
-        System.out.println("Image: " + imageName);
+        System.out.println("Image with name: " + imageName);
     }
 }
