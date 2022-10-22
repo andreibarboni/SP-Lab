@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Book extends Section {
-    private final List<Author> authorList = new ArrayList<Author>();
-    private final List<Element> elementList = new ArrayList<Element>();
+    private List<Author> authorList = new ArrayList<Author>();
+    private List<Element> elementList = new ArrayList<Element>();
 
     public Book(String title) {
         super(title);
@@ -15,6 +15,7 @@ public class Book extends Section {
     @Override
     public void print() {
         System.out.println("Book: " + title + "\n");
+
         System.out.println("Authors:");
         for (Author author:authorList) {
             author.print();
