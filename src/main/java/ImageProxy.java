@@ -8,7 +8,7 @@ public class ImageProxy implements Element, Picture {
         this.url = url;
     }
 
-    Image loadImage(){
+    public Image loadImage(){
         if(realImg == null){
             realImg = new Image(url);
         }
