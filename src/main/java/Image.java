@@ -1,8 +1,17 @@
-public class Image implements Element {
-    private final String imageName;
+import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
-    public Image(String imageName) {
-        this.imageName = imageName;
+public class Image implements Element, Picture {
+    private final String url;
+
+    public Image(String name) {
+        this.url = name;
+
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -22,6 +31,11 @@ public class Image implements Element {
 
     @Override
     public void print() {
-        System.out.println("Image with name: " + imageName);
+        System.out.println("Image with name: " + url);
+    }
+
+    @Override
+    public String url() {
+        return url;
     }
 }

@@ -19,8 +19,8 @@ public class Book extends Section {
         System.out.println("Authors:");
         for (Author author:authorList) {
             author.print();
+            System.out.println("\n");
         }
-        System.out.println("\n");
 
         for (Element element:elementList) {
             element.print();
