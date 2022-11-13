@@ -21,6 +21,11 @@ public class TableOfContents implements Element, Visitee {
     }
 
     @Override
+    public void accept(BookSaveVisitor bookSaveVisitor) {
+        bookSaveVisitor.visitTableOfContents(this);
+    }
+
+    @Override
     public Element get(int index) {
         //Nu trebuie sa le implementam
         return null;

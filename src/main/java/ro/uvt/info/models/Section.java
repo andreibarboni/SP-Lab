@@ -23,6 +23,11 @@ public class Section implements Element, Visitee {
 //    }
 
     @Override
+    public void accept(BookSaveVisitor bookSaveVisitor) {
+        bookSaveVisitor.visitSection(this);
+    }
+
+    @Override
     public void add(Element element) {
         // cream clona
 

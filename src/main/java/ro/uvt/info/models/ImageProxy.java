@@ -79,4 +79,9 @@ public class ImageProxy implements Element, Picture, Visitee {
     public void accept(Visitor visitor) {
         visitor.visitImageProxy(this);
     }
+
+    @Override
+    public void accept(BookSaveVisitor bookSaveVisitor) {
+        bookSaveVisitor.visitImageProxy(this);
+    }
 }

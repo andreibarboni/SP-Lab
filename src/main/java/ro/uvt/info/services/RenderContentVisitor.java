@@ -1,7 +1,6 @@
 package ro.uvt.info.services;
 
 import ro.uvt.info.models.*;
-import ro.uvt.info.*;
 
 import java.util.ArrayList;
 

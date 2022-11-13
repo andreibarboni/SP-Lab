@@ -26,6 +26,11 @@ public class Paragraph implements Element, Visitee {
         this.text = text;
     }
 
+    @Override
+    public void accept(BookSaveVisitor bookSaveVisitor) {
+        bookSaveVisitor.visitParagraph(this);
+    }
+
     Paragraph(Paragraph paragraph){
         text = paragraph.text;
     }

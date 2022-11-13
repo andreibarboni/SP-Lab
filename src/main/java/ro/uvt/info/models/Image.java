@@ -28,6 +28,11 @@ public class Image implements Element, Picture, Visitee {
         this.factory = factory;
     }
 
+    @Override
+    public void accept(BookSaveVisitor bookSaveVisitor) {
+        bookSaveVisitor.visitImage(this);
+    }
+
     public ImageContent getContent() {
         return content;
     }

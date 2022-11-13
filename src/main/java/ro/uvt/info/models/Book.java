@@ -33,6 +33,10 @@ public class Book implements Visitee {
         this.content.add(element);
     }
 
+    @Override
+    public void accept(BookSaveVisitor bookSaveVisitor) {
+        bookSaveVisitor.visitBook(this);
+    }
 
     @Override
     public void accept(Visitor visitor) {

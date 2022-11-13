@@ -32,6 +32,11 @@ public class Table implements Element, Visitee {
     }
 
     @Override
+    public void accept(BookSaveVisitor bookSaveVisitor) {
+        bookSaveVisitor.visitTable(this);
+    }
+
+    @Override
     public void remove(Element element) {
         //Nu trebuie sa le implementam
     }
