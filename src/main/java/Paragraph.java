@@ -20,6 +20,10 @@ public class Paragraph implements Element{
         throw new UnsupportedOperationException();
     }
 
+    public String getText() {
+        return text;
+    }
+
     @Override
     public void print() {
         System.out.println("Paragraph: " + text);
