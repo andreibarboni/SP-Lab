@@ -16,11 +16,11 @@ public class Section implements Element, Visitee {
         name = section.name;
     }
 
-//    public void print(){
-//        System.out.println(name);
-//        for(Element el:elements)
-//            el.print();
-//    }
+    public void print(){
+        System.out.println(name);
+        for(Element el:elements)
+            el.print();
+    }
 
     @Override
     public void accept(BookSaveVisitor bookSaveVisitor) {

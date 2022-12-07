@@ -37,10 +37,10 @@ public class ImageProxy implements Element, Picture, Visitee {
         this.dim= new Dimension(35,45);
     }
 
-//    public void print() {
-//        Image img = loadImage();
-//        img.print();
-//    }
+    public void print() {
+        Image img = loadImage();
+        img.print();
+    }
 
     @Override
     public void add(Element element) {

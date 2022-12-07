@@ -4,7 +4,7 @@ package ro.uvt.info.models;
 import ro.uvt.info.services.*;
 
 public class TableOfContents implements Element, Visitee {
-    //public void print()
+    public void print()
     {
         System.out.println("Mesaj");
     }

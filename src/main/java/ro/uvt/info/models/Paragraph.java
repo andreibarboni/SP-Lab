@@ -34,18 +34,16 @@ public class Paragraph implements Element, Visitee {
     Paragraph(Paragraph paragraph){
         text = paragraph.text;
     }
-//    public void print(){
-//        if(alignStrategy != null){
-//            alignStrategy.render(this,null);
-//        }else {
-//            System.out.println("Paragraph: " + text);
-//        }
-//        //System.out.println(text);
-//    }
+    public void print(){
+       if(alignStrategy != null){
+            alignStrategy.render(this,null);
+       }else {
+           System.out.println("Paragraph: " + text);
+       }
+    }
 
     @Override
     public void add(Element element) {
-        //Nu trebuie sa le implementam
     }
 
     @Override

@@ -21,10 +21,10 @@ public class Table implements Element, Visitee {
         title=table.title;
     }
 
-//    public void print()
-//    {
-//        System.out.println(title);
-//    }
+    public void print()
+    {
+        System.out.println(title);
+    }
 
     @Override
     public void add(Element element) {

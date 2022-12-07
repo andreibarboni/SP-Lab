@@ -56,9 +56,9 @@ public class Image implements Element, Picture, Visitee {
         imageName = image.imageName;
     }
 
-//    public void print(){
-//        System.out.println(imageName);
-//    }
+    public void print(){
+        System.out.println(imageName);
+    }
 
     public void setContent (String type){
         ImageLoader loader = factory.create(type);

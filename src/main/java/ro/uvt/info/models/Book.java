@@ -6,21 +6,26 @@ import java.util.ArrayList;
 
 public class Book implements Visitee {
     private String title;
-    private ArrayList<Author> authors;
+    private ArrayList<Author> authors = new ArrayList<>();
     private ArrayList<Element> content= new ArrayList<>();
     public Book(String name) {
         this.title = name;
     }
 
 
-//    public void print()
-//    {
-//        System.out.println(this.title);
-//        for(Author el:authors)
-//            el.print();
-//        for(Element el:content)
-//            el.print();
-//    }
+    public void print()
+    {
+        System.out.print(this.title);
+        System.out.print("\n");
+        System.out.print("Authors: ");
+        for (Author author : authors) {
+            author.print();
+        }
+        System.out.print("\n");
+        for (Element element:content) {
+            element.print();
+        }
+    }
     public void addAuthor(Author a)
     {
         if(authors==null)
